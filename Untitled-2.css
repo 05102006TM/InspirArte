@@ -1,0 +1,181 @@
+body {
+  font-family: "Times New Roman", serif; /* Fuente de texto principal*/
+  margin: 0; /*Elimina los margenes por defecto*/
+  padding: 0;
+  overflow-x: hidden; /*Evita el dezplazamiento horizontal*/
+  background-color: #fff; /*Establece el color de fondo*/
+}
+
+.icono {
+  display: none; /*Oculta el icono en pantallas grandes*/
+  font-size: 24px; /*Tamaño del icono*/
+  padding: 10px;
+  cursor: pointer; /*Muestra un cursor de mano para indicar que es clickeable*/
+}
+
+.navbar {
+  background-color: #fdf9f9; /*Fondo del menu*/
+  padding: 10px 0; /*Espaciado superior e inferior del menu*/
+  text-align: center; /*Centra el txto del menu*/
+  border-bottom: 1px solid #0e0c0c;
+  display: none; /*Oculta el menupor defecto*/
+}
+
+.navbar ul {
+  list-style: none; 
+  margin: 0; /*Elimina el margen*/
+  padding: 0;
+  display: inline-flex; /*Muestra los elementos en linea*/
+  gap: 30px; /*Espaciado entre los elementos*/
+}
+
+.navbar li a {
+  text-decoration: none; /*Elimina el subrayado de los enlaces*/
+  color: #333; /*Color del texto del enlace*/
+  font-size: 18px; /*Tamaño de la fuente*/
+  padding: 5px 10px;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  width: 100%; /*Establece el banner al 100% del ancho*/
+  display: flex; /*Caja flex para centrara el contenido*/
+  justify-content: center; /*Centra horizontalmente*/
+  align-items: center; /*Centra verticalmente*/
+  overflow: hidden; 
+  margin-top: 10px;
+}
+
+.banner-image {
+  width: 100%; /*Hace que la imagen ocupe todo el ancho*/
+  max-height: 500px; /*Limita la altura maxima de la imagen*/
+  object-fit: cover; /*Ajusta la imagen para que cubra la pantalla sin que se distorcione*/
+  border: 2px solid black; /*Agrega un borde negro*/
+  border-radius: 5px;
+}
+
+.content {
+  margin: 40px auto; /*Márgenes automáticos para centrar el contenido*/
+  padding: 20px;
+  text-align: center; /*Centra el texto*/
+}
+
+h1 {
+  font-size: 26px; /*Tamaño de la fuente del título*/
+  color: #000; /*Color del texto*/
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px; /*Tamaño de la fuente del párrafo*/
+  color: #333; /*Color dl texto*/
+  line-height: 1.6; 
+}
+
+
+.cajacontenedora {
+  display: flex; /*Sirve para que el modelo de diseño sea flexible*/
+  justify-content: center; /*Centra la imagen*/
+  gap: 40px; /*Espaciado entre los elementos*/
+  padding: 50px 30px;
+  flex-wrap: wrap;
+}
+
+.caja {
+  flex: 1 1 calc(25% - 30px); 
+  max-width: calc(25% - 30px);
+  aspect-ratio: 1 / 1;
+  background-color: #000; /*Color de fondo*/
+  border-radius: 5px;
+  overflow: hidden; /*Evita el dezplazamiento horizontal*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /*Sombreado de las imágenes de las cajas*/
+}
+
+.caja img {
+  width: 100%; /*Hace que la imagen ocupe todo el ancho*/
+  height: 100%; /*Altura de la imagen*/
+  object-fit: cover; /*La imagen cubre todo el contenedor, recortando si es necesario*/
+  display: block; /*Hace que el elemento se comporte como un bloque*/
+}
+
+.galeria-cajas {
+  display: flex; /*Sirve para que el modelo de diseño sea flexible*/
+  justify-content: center;  /* Centra horizontalmente */
+  flex-wrap: wrap;
+  justify-content: center;  /* Centra horizontalmente */
+  gap: 30px; /* Espaciado entre los elementos */
+  margin-top: 50px;
+  padding: 0 20px; /*Establece un espaciado de 0 en la parte superior e inferior, y 20px en los lados izquierdo y derecho*/
+}
+
+.caja img {
+  width: 100%; /*Ancho de la imagen ocupe toda la pantallaal 100%*/
+  height: 100%; /*Altura de la imagen*/
+  object-fit: cover; /*La imagen cubre todo el contenedor, recortando si es necesario*/
+  display: block; /*Hace que el elemento se comporte como un bloque*/
+}
+
+/*Media query para tablet*/
+/* Tablets 1024px */
+@media (max-width: 1024px) { .caja { flex: 1 1 45%; /*Hace que cada caja ocupe el 45%*/ max-width: 45%; /*Limita el ancho máximo al 45%*/ } header {display: block; /*Muestra el header en moviles*/ }
+nav ul {justify-content: center; /*Centra los elementos del menú*/ }
+}
+
+/*Media query para smartphones*/
+/* Smartphone 480px */
+@media (max-width: 480px) { .caja { flex: 90%; /*Hace que cada caja ocupe el 90% del ancho*/ max-width: 90%; /*Limita el ancho al 90%*/ } nav { display:none; /*Oculta el menú por defecto en móviles*/ } .icono { display: block; /*Muestra el ícono para abrir el menú*/ } .mostrarmenu {display:block; /*Muestra el menú cuando s agrega esta clase*/ }
+}
+
+.navbar {
+  display: none;
+}
+
+.icono {
+  display: block; color: #000;
+} 
+
+/* CAMBIO: clase para mostrar el menú al hacer clic */
+.mostrarmenu {
+  display: block !important; /*Muestra el menú en pantallas grandes*/ 
+}
+
+/* CAMBIO: Media query para computadoras */
+@media (min-width: 769px) {
+.navbar {
+  display: block !important; /*Muestra el menú en pantallas grandes*/ 
+}
+
+.icono {
+  display: none; color: #000;  /*Oculta el ícono en pantallas grandes*/
+} 
+}
+
+footer {
+  background-color: #050505; /* Fondo del pie de página */
+  color: #f8f4f4; /*Color del texto*/
+  padding: 20px 0; /*Espaciado en el pie de página*/
+  text-align: center; /*Centra el texto*/
+  margin-top: 40px; /*Espaciado superior*/
+}
+
+.footer-content h1,
+.footer-content h2 {
+  color: #ffffff; /*Color de los títulos del pie de página*/
+}
+.footer-content a {
+  color: #f8f2f2; /*Color de los enlaces*/
+  text-decoration: none; /*Elimina el subrayado*/
+  margin: 0 10px; /*Espaciado entre enlaces*/
+}
+
+.footer-content a:hover {
+  text-decoration: underline /*Subraya los enlaces al darle click*/
+}
+
+.social-icons i {
+  margin: 0 8px; /*Espaciado entre los íconos de redes sociales*/
+  font-size: 20px; /*Tamaño de los íconos*/
+}
