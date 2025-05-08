@@ -62,22 +62,28 @@
                   <p class="texto-noticia">Una fotografía editorial que fusiona moda contemporánea con la estética barroca.</p>
                 </div>
               </div>
-            <div style="height: 200px;"></div>
-
+            <div style="height: 100px;"></div>
             <div class="galeria-tres">
-                <div class="caja-grande">
-                  <img src="Diseñador 1.jpeg" alt="Imagen grande 1">
-                  <p class="nombre">Lucía Fernández</p>
-                </div>
-                <div class="caja-grande">
-                  <img src="Diseñador 2.jpeg" alt="Imagen grande 2">
-                  <p class="nombre">Lucía Fernández</p>
-                </div>
-                <div class="caja-grande">
-                  <img src="Diseñador 3.jpeg" alt="Imagen grande 3">
-                  <p class="nombre">Lucía Fernández</p>
-                </div>
+              <div class="caja-slider">
+                <img src="Diseñador 1.jpeg" alt="Diseñador 1 - vista 1" class="img-slider visible">
+                <img src="Adkins.jpeg" alt="Diseñador 1 - vista 2" class="img-slider">
+                <p class="nombre">Ariel Adkins</p>
               </div>
+            
+              <div class="caja-slider">
+                <img src="Diseñador 2.jpeg" alt="Diseñador 2 - vista 1" class="img-slider visible">
+                <img src="Versaches.jpeg" alt="Diseñador 2 - vista 2" class="img-slider">
+                <p class="nombre">Gianni Versaches</p>
+              </div>
+            
+              <div class="caja-slider">
+                <img src="Diseñador 3.jpeg" alt="Diseñador 3 - vista 1" class="img-slider visible">
+                <img src="Jardín.jpeg" alt="Diseñador 3 - vista 2" class="img-slider">
+                <p class="nombre">Jorge Rey</p>
+              </div>
+            </div>
+            
+            
     </main>
 <footer>
     <div class="footer-content">
@@ -99,6 +105,20 @@
         x.className = "";
       }
     }
-  </script>
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".caja-slider");
+
+    sliders.forEach(slider => {
+      slider.addEventListener("click", function () {
+        const images = slider.querySelectorAll(".img-slider");
+        images.forEach(img => img.classList.toggle("visible"));
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

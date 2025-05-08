@@ -331,13 +331,17 @@ footer {
   flex-direction: column;
 }
 
-
 .caja-grande img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 250px;
+  object-fit: cover;
   display: block;
+  border: 12px ridge #a0522d; /* borde con relieve tipo madera */
+  background-color: #fff8dc;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+  box-sizing: border-box;
 }
+
 
 .caja-grande p {
   margin-top: 10px;
@@ -351,7 +355,7 @@ footer {
   margin: 40px auto;
   max-width: 1200px;
   padding: 0 20px;
-  gap: 20px;
+  flex-flow: wrap;
 }
 
 .caja-grande {
@@ -372,3 +376,18 @@ footer {
   color: #333;
   text-align: center;
 }
+
+.img-slider {
+  display: none;
+  width: 100%;
+  cursor: pointer;
+  
+}
+
+.img-slider.visible {
+  display: block;
+}
+
+.caja-slider {width: 31.3%; margin: 1%;}
+
+
