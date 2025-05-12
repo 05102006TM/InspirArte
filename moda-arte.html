@@ -18,8 +18,47 @@
         <a href="index.html"><img class="logo" src="Logo (2).png"/></a>
     </header>
     <main class="content">
-        <h1>Moda y Arte</h1>
-        <p>Contenido específico sobre cómo el arte ha influenciado la moda a través del tiempo...</p>
+        <section class="hero-slider">
+            <div class="slides">
+                <img src="Slider.jpg" class="slide active">
+                <img src="Slider 2 2.jpg" class="slide">
+                <img src="Slider 3 3.jpg" class="slide">
+              </div>
+              <div class="hero-content">
+                <h1>Moda y Arte: Un Diálogo Creativo</h1>
+                <p>Explorando las influencias mutuas entre el arte y las tendencias que visten el mundo.</p>
+            <div class="hero-content">
+                <a href="#articulos" class="hero-btn">Descubrí más</a>
+            </div>
+        </section>        
+
     </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+      
+        setInterval(() => {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 5000); // cambia cada 5 segundos
+      </script>
+
+<div class="contenido-pantalla-completa">
+    <h1>Expresionarte: Jorge Rey fusiona moda y arte en un espectáculo único</h1>
+    <img src="Jorge rey imagen.jpg" alt="Desfile Jorge Rey">
+    
+    <div class="texto-informativo">
+      <p>El diseñador argentino <strong>Jorge Rey</strong> presentó su innovadora colección de alta costura titulada <em>Expresionarte</em> el 10 de octubre de 2024 en el Hipódromo de Palermo, Buenos Aires. El evento, al que asistieron más de 800 personas, fusionó moda, teatro, música en vivo y artes visuales, ofreciendo una experiencia multisensorial que desbordó los límites convencionales de un desfile de moda.</p>
+
+      <p>Inspirada en la obra maestra del Renacimiento flamenco <em>El Jardín de las Delicias</em> de <strong>El Bosco</strong>, la colección exploró la dualidad entre el caos y la belleza, lo onírico y lo terrenal. Las más de 50 piezas exclusivas presentadas destacaron por sus volúmenes esculturales y texturas tridimensionales, muchas de ellas elaboradas con materiales reutilizados, simbolizando la transformación y la regeneración.</p>
+
+      <p>Rey no solo mostró sus diseños, sino que también participó activamente en las performances del evento, que incluyeron teatro, baile y la presentación del video musical de su canción <em>"Oh Dios - Akirey"</em>, producido por él mismo. Con <strong>Expresionarte</strong>, el diseñador buscó transmitir un mensaje de autenticidad y expresión personal, invitando a los asistentes a reconectar con su esencia artística y única.</p>
+
+      <p>La producción del espectáculo involucró a más de 150 profesionales, entre bailarines, actores, músicos y técnicos, consolidando a Jorge Rey como una figura vanguardista en la moda argentina, capaz de transformar un desfile en una auténtica obra de arte en movimiento.</p>
+    </div>
+  </div>
+
+      
 </body>
 </html>
