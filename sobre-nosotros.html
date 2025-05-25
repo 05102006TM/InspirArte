@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    
     <header>
         <nav class="navbar">
             <ul>
@@ -21,5 +22,42 @@
         <h1>Sobre Nosotros</h1>
         <p>Esta página fue creada para explorar la relación entre el arte y la moda. Aquí podés encontrar información sobre quiénes somos, por qué hicimos esta web y qué queremos transmitir.</p>
     </main>
+
+    <h1>Contacto</h1>
+
+    <form action="respuesta.html" method="post">
+        <p>
+            <label>Nombre y Apellido:</label>
+            <input type="text" name="nombre" required placeholder="Nombre">
+        </p>
+
+        <p>
+            <label>Email:</label>
+            <input type="email" name="email" required placeholder="Email">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar formulario">
+        </p>
+    </form>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+
+        formulario.addEventListener("submit", function(event) {
+            const nombre = formulario.nombre.value.trim();
+            const email = formulario.email.value.trim();
+
+            if (!nombre || !email) {
+                alert("Por favor, completa todos los campos.");
+                event.preventDefault(); // evita el envío si hay campos vacíos
+            }
+        });
+    </script>
+
+
+
+
+    </form>
 </body>
 </html>

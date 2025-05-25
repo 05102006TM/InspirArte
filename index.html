@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte y Moda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
             <i class="fa fa-bars"></i>
           </a>
         <nav class="navbar" id="navegador">
-            <ul>
+            <ul class="menu">
                 <li><a href="moda-arte.html">Moda y Arte</a></li>
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -90,15 +91,114 @@
             
             
     </main>
-<footer>
-    <div class="footer-content">
-       <h1> Trinidad Maruff</h1>
-        <h2> Encontranos en nuestras redes sociales </h2>
-        <div class="social-icons">
-            <a href="#"><i class="fa fa-instagram"></i></a>
+
+
+    <div class="anuncios-bar" style="display: none;">
+      <a href="index.html" class="anuncio-link">
+      <div class="anuncio-contenido">
+        <img src="Logo en negativo.png" alt="Logo InspirArte" class="logo-anuncio">
+        <div class="mensaje-anuncio" id="mensajeRotativo">
+          Informate sobre los últimos cruces entre moda y arte
         </div>
-    </div>
-</footer>
+        <div class="btn-anuncio">Ver más</div>
+      </div>
+    </a>
+  </div>
+
+  <iframe src="anuncio (1).html" class="iframe-anuncio"></iframe>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mensajes = [
+          "Informate sobre los últimos cruces entre moda y arte",
+          "Sumate a nuestra comunidad creativa",
+          "Descubri las inspiraciones de diseñadores en el arte"
+          
+        ];
+    
+        let index = 0;
+        const mensajeEl = document.getElementById("mensajeRotativo");
+        const anuncio = document.querySelector(".anuncios-bar");
+    
+        function cambiarMensaje() {
+          mensajeEl.style.opacity = 0;
+          setTimeout(() => {
+            index = (index + 1) % mensajes.length;
+            mensajeEl.textContent = mensajes[index];
+            mensajeEl.style.opacity = 1;
+          }, 1000);
+        }
+    
+        setInterval(cambiarMensaje, 5000);
+    
+        // Mostrar el anuncio una sola vez cuando aparece el footer
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              anuncio.style.display = "flex";
+              obs.disconnect(); // Detener la observación para que no vuelva a esconder el anuncio
+            }
+          });
+        }, {
+          root: null,
+          threshold: 0.3 // Ajustado para detectar cuando 30% del footer es visible
+        });
+    
+        const footer = document.getElementById("footer");
+        if (footer) {
+          observer.observe(footer);
+        }
+      });
+    </script>
+    
+  
+    <footer id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="Logo en negativo.png" alt="logo-inspirarte">
+            <p>Moda y arte que expresan tu esencia</p>
+          </div>
+      
+          <div class="footer-links">
+            <h3>Explorá</h3>
+            <ul>
+              <li><a href="moda-arte.html">Moda y Arte</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>hola@inspirarte.com</p>
+            <p>Buenos Aires, Argentina</p>
+          </div>
+      
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>¿Querés recibir inspiración cada semana?</p>
+            <form>
+              <input type="email" placeholder="Tu email" required>
+              <button type="submit">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>© 2025 InspirArte. Todos los derechos reservados.</p>
+          <p><em>“La moda es arte en movimiento.”</em></p>
+        </div>
+      
+   
+
 <button onclick="scrollToTop()" id="topBtn">Volver al inicio</button>
 <script>
     function MiFuncion() {
