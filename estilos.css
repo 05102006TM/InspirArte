@@ -72,12 +72,14 @@ h1 {
   font-size: 26px; /*Tamaño de la fuente del título*/
   color: #000; /*Color del texto*/
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 p {
   font-size: 18px; /*Tamaño de la fuente del párrafo*/
-  color: #333; /*Color dl texto*/
+  color: #000000; /*Color dl texto*/
   line-height: 1.6; 
+  text-align: justify;
 }
 
 
@@ -503,7 +505,7 @@ body {
 
 .contenido-pantalla-completa img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 500px;
   display: block;
   margin: 0 auto 40px auto;
   border-radius: 12px;
@@ -959,4 +961,10 @@ body {
     padding: 10px 20px;
   }
 }
+
+
+
+
+
+
 
