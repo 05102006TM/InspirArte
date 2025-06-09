@@ -20,16 +20,18 @@
       }
 
       .anuncio {
-        width: 100%;
-        max-width: 728px;
-        height: 90px;
-        background-color: #000000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        margin: auto;
-      }
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+  overflow: hidden;            /* NUEVO: evita que se desborde */
+  box-sizing: border-box;      /* NUEVO: incluye padding dentro del ancho */
+}
 
       .anuncio img {
         max-height: 107px;
@@ -37,14 +39,14 @@
       }
 
       .anuncio h1 {
-        font-size: 17px;
-  margin: 20px 0;
+  font-size: 17px;
+  margin: 0 10px;
   text-align: center;
-  flex: unset;
-  width: 100%;
-    
-
-      }
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
       .boton {
         background-color: rgb(255, 255, 255);
@@ -72,16 +74,27 @@
         }
 
         .anuncio h1 {
-          font-size: 20px;
-          margin: 20px 0;
-        }
+  font-size: 16px;
+  margin: 10px 0;
+  white-space: normal;     /* Permite salto de línea */
+  overflow-wrap: break-word; /* Corta palabras largas si es necesario */
+  text-align: center;
+}
+
 
         .boton {
           padding: 12px 20px;
           font-size: 18px;
         }
       }
-    </style>
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+</style>
   </head>
 
   <body>
