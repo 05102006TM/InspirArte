@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería</title>
-    <link rel="stylesheet" href="estilos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+   
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="moda-arte.html">Moda y Arte</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="artículos.html">Artículos</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
+
+      <div class="icono" onclick="document.querySelector('nav').classList.toggle('mostrarmenu')">
+        ☰
+      </div>
+      
+      <nav class="navbar">
+        <a href="moda-arte.html">MODA Y ARTE</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="artículos.html">ARTÍCULOS</a>
+        <a href="sobre-nosotros.html">SOBRE NOSOTROS</a>
+      </nav>
         <a href="index.html"><img class="logo" src="Logo (2).png"/></a>
     </header>
     <main class="content">
@@ -24,40 +28,56 @@
         <p>Esta sección incluye una galería de imágenes relacionadas con el arte y la moda a través del tiempo.</p>
     </main>
 
+
     <section class="galeria">
-        <div class="galeria-grid">
-          <a href="Slider 2 2.jpg" data-lightbox="galeria" data-title="Pasarela 1">
-            <img src="Slider 2 2.jpg" alt="Pasarela 1">
-          </a>
-          <a href="Slider 3 3.jpg" data-lightbox="galeria" data-title="Detalle del diseño">
-            <img src="Slider 3 3.jpg" alt="Detalle del diseño">
-          </a>
-          <a href="Slider.jpg" data-lightbox="galeria" data-title="Performance en escena">
-            <img src="Slider.jpg" alt="Performance en escena">
-          </a>
-          <a href="Pasarela 2.jpeg" data-lightbox="galeria" data-title="Vestuario inspirado en El Bosco">
-            <img src="Pasarela 2.jpeg" alt="Vestuario inspirado en El Bosco">
-          </a>
-          <a href="el bosco.avif" data-lightbox="galeria" data-title="Backstage del evento">
-            <img src="el bosco.avif" alt="Backstage del evento">
-          </a>
-          <a href="Pasarela 1.jpeg" data-lightbox="galeria" data-title="Final del desfile">
-            <img src="Pasarela 1.jpeg" alt="Final del desfile">
-          </a>
-          <a href="schiaparelli.jpeg" data-lightbox="galeria" data-title="Final del desfile">
-            <img src="schiaparelli.jpeg" alt="Final del desfile">
-          </a>
-          <a href="versache.jpg" data-lightbox="galeria" data-title="Final del desfile">
-            <img src="versache.jpg" alt="Final del desfile">
-          </a>
-          <a href="ariel.jpg" data-lightbox="galeria" data-title="Final del desfile">
-            <img src="ariel.jpg" alt="Final del desfile">
-          </a>
+      <div class="galeria-grid">
+        
+        <a href="ariel.jpg" data-lightbox="galeria" data-title="Final del desfile">
+          <img src="ariel.jpg" alt="Final del desfile">
+        </a>
+    
+        <a href="Versace.jpg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="Versace.jpg" alt="Imagen Lightbox">
+        </a>
+    
+        <a href="Pasarela 2.jpeg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="Pasarela 2.jpeg" alt="Imagen Lightbox">
+        </a>
+    
+        <a href="el bosco.avif" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="el bosco.avif" alt="Imagen Lightbox">
+        </a>
+    
+        <a href="schiaparelli.jpeg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="schiaparelli.jpeg" alt="Imagen Lightbox">
+        </a>
+    
+        <a href="versache.jpg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="versache.jpg" alt="Imagen Lightbox">
+        </a>
+    
+        <a href="versa.jpg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="versa.jpg" alt="Imagen Lightbox">
+        </a>
+
+        <a href="gucci.jpg" data-lightbox="galeria" data-title="Imagen ampliada">
+          <img src="gucci.jpg" alt="Imagen Lightbox">
+        </a>
+    
+      </div>
+
+ <!-- Script Lightbox -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
           
-        </div>
-      </section>
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+
+
+    </section>
+    
 
 
 
