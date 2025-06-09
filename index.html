@@ -11,20 +11,35 @@
 </head>
 <body>
     <header>
-        <a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
-            <i class="fa fa-bars"></i>
-          </a>
-        <nav class="navbar" id="navegador">
-            <ul class="menu">
-                <li><a href="moda-arte.html">Moda y Arte</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
+        
+      <div class="icono" onclick="document.querySelector('nav').classList.toggle('mostrarmenu')">
+        ☰
+      </div>
+      
+      <nav class="navbar">
+        <a href="moda-arte.html">MODA Y ARTE</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="artículos.html">ARTÍCULOS</a>
+        <a href="sobre-nosotros.html">SOBRE NOSOTROS</a>
+      </nav>
+   
+      
         <div class="banner">
             <img src="Portada.jpeg" alt="Portada de arte y moda" class="banner-image">
         </div>
     </header>
+
+
+    
+
+
+
+
+
+
+
+
+
 
     <main>
       
@@ -45,34 +60,34 @@
             <!--contenido de prueba para hacer scroll-->
             <div class="galeria-cajas">
                 <div class="caja-noticia">
-                  <a href="WhatsApp Image 2025-04-20 at 20.02.02.jpeg" data-lightbox="fotos" tittle="Moda y Arte">
-                    <img src="WhatsApp Image 2025-04-20 at 20.02.02.jpeg" >
+                  <a href="el bosco.avif" data-lightbox="fotos" tittle="Moda y Arte">
+                    <img src="el bosco.avif" >
                   </a>
-                    <p class="texto-noticia">La moda urbana toma inspiración del expresionismo alemán en esta colección que mezcla dramatismo y color.</p>
-                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                    <p class="texto-noticia">Diseñador argentino personificó sus prendas en la tan reconocida obra de arte "El jardín de las delicias"</p>
+                    <a href="artículos.html" class="ver-mas">Leer más</a>
                 </div>
                 <div class="caja-noticia">
-                  <a href="WhatsApp Image 2025-04-20 at 20.03.04 (1).jpeg" data-lightbox="fotos" tittle="Moda y Arte">
-                    <img src="WhatsApp Image 2025-04-20 at 20.03.04 (1).jpeg">
+                  <a href="versache.jpg" data-lightbox="fotos" tittle="Moda y Arte">
+                    <img src="versache.jpg">
                   </a>
-                    <p class="texto-noticia">Diseños que evocan el cubismo: geometría y estructura dominan la silueta femenina de este año.</p>
-                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                    <p class="texto-noticia">La inspiración del arte clásico y la cultura pop en los diseños de Gianni Versache que dejan marca</p>
+                    <a href="artículos.html" class="ver-mas">Leer más</a>
                 </a>
                 </div>
                 <div class="caja-noticia">
-                  <a href="WhatsApp Image 2025-04-20 at 20.03.04.jpeg" data-lightbox="fotos" tittle="Moda y Arte">
-                    <img src="WhatsApp Image 2025-04-20 at 20.03.04.jpeg">
+                  <a href="ariel.jpg" data-lightbox="fotos" tittle="Moda y Arte">
+                    <img src="ariel.jpg">
                   </a>
-                    <p class="texto-noticia">La influencia surrealista revive con texturas oníricas y cortes inesperados en esta pasarela disruptiva.</p>
-                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                    <p class="texto-noticia">La diseñadora, Ariel Adkins se ha inspirado a lo largo de los años en obras de arte reconocidas</p>
+                    <a href="artículos.html" class="ver-mas">Leer más</a>
                 </div>
                 <div class="caja-noticia">
-                    <a href="WhatsApp Image 2025-04-20 at 19.59.21.jpeg" data-lightbox="fotos" tittle="Moda y Arte"> 
-                      <img src="WhatsApp Image 2025-04-20 at 19.59.21.jpeg" >
+                    <a href="schiaparelli.jpeg" data-lightbox="fotos" tittle="Moda y Arte"> 
+                      <img src="schiaparelli.jpeg" >
                     </a>
           
-                    <p class="texto-noticia">Del lienzo a la prenda: reinterpretaciones del arte renacentista en la moda contemporánea.</p>
-                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                    <p class="texto-noticia">Inspiración surrealista en alta costura: texturas oníricas y siluetas que desafían la lógica</p>
+                    <a href="artículos.html" class="ver-mas">Leer más</a>
                 </div>
             </div>
 
@@ -94,12 +109,15 @@
               </div>
             <div style="height: 100px;"></div>
             <div class="galeria-tres">
+              <h2 class="titulo-destacado">Diseñadores que se han inspirado en arte</h2>
               <div class="caja-slider">
                 <img src="Diseñador 1 1.jpg" alt="Diseñador 1 - vista 1" class="img-slider visible">
                 <img src="Pasarela 1.jpeg" alt="Diseñador 1 - vista 2" class="img-slider">
                 <p class="nombre">Ariel Adkins</p>
               </div>
-            
+
+
+              
               <div class="caja-slider">
                 <img src="Diseñador 2 2.jpg" alt="Diseñador 2 - vista 1" class="img-slider visible">
                 <img src="Pasarela 2.jpeg" alt="Diseñador 2 - vista 2" class="img-slider">

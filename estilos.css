@@ -37,7 +37,7 @@ body {
 .navbar li a {
   text-decoration: none; /*Elimina el subrayado de los enlaces*/
   color: #fff; /*Color del texto del enlace*/
-  font-size: 18px; /*Tamaño de la fuente*/
+  font-size: 15px; /*Tamaño de la fuente*/
   padding: 5px 10px;
 }
 
@@ -63,8 +63,8 @@ body {
 }
 
 .content {
-  margin: 40px auto; /*Márgenes automáticos para centrar el contenido*/
-  padding: 20px;
+  margin: 45px auto; /*Márgenes automáticos para centrar el contenido*/
+  padding: 40px;
   text-align: center; /*Centra el texto*/
 }
 
@@ -144,23 +144,82 @@ nav ul {justify-content: center; /*Centra los elementos del menú*/ }
 }
 
 
-/*Media query para smartphones*/
-/* Smartphone 480px */
-@media (max-width: 480px) { .caja { flex: 90%; /*Hace que cada caja ocupe el 90% del ancho*/ max-width: 90%; /*Limita el ancho al 90%*/ } nav { display:none; /*Oculta el menú por defecto en móviles*/ } .icono { display: block; /*Muestra el ícono para abrir el menú*/ } .mostrarmenu {display:block; /*Muestra el menú cuando s agrega esta clase*/ }
+/* ===== ESTILOS POR DEFECTO (para tablets y computadoras) ===== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: #4d1616;
+  padding: 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.navbar {
-  display: none;
+.navbar a {
+  margin: 0 15px;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #888;
 }
 
 .icono {
-  display: block; color: #000;
-} 
-
-/* CAMBIO: clase para mostrar el menú al hacer clic */
-.mostrarmenu {
-  display: block !important; /*Muestra el menú en pantallas grandes*/ 
+  display: none; /* El ícono hamburguesa está oculto por defecto */
 }
+
+
+/* ===== MEDIA QUERY: SOLO para smartphones ===== */
+@media (max-width: 480px) {
+  .navbar {
+    display: none; /* Oculta el menú horizontal */
+    flex-direction: column;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .icono {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 12px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+  }
+
+  .navbar a:hover {
+    background-color: #4d1616;
+  }
+
+  /* Cuando el menú se activa en celulares */
+  .mostrarmenu {
+    display: flex !important;
+  }
+}
+
+
+
+
 
 /* CAMBIO: Media query para computadoras */
 @media (min-width: 769px) {
@@ -202,7 +261,7 @@ nav ul {justify-content: center; /*Centra los elementos del menú*/ }
   line-height: 1.5;
 }
 
-.leer-mas {
+.ver-mas {
   font-size: 14px;
   color: #0a0a0a;
   text-decoration: none;
@@ -210,7 +269,7 @@ nav ul {justify-content: center; /*Centra los elementos del menú*/ }
   display: inline-block;
 }
 
-.leer-mas:hover {
+.ver-mas:hover {
   text-decoration: underline;
 }
 
@@ -346,6 +405,16 @@ nav ul {justify-content: center; /*Centra los elementos del menú*/ }
   padding: 0 20px;
   flex-flow: wrap;
 }
+
+.titulo-destacado {
+  text-align: center;
+  font-size: 2.5rem; /* ajustalo según tu diseño */
+  font-weight: bold;
+  margin: 40px auto 20px auto; /* margen superior e inferior */
+  width: 100%;
+  display: block;
+}
+
 
 .caja-grande {
   flex: 1;
@@ -960,6 +1029,224 @@ body {
     font-size: 16px;
     padding: 10px 20px;
   }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f2eb; /* Fondo claro elegante */
+    position: absolute;
+    top: 50px; /* Espacio debajo del ícono hamburguesa */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar ul.menu {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar li a {
+    color: #111; /* Texto negro elegante */
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .navbar li a:hover {
+    color: #b30000; /* Rojo elegante al pasar el mouse */
+  }
+
+  .icono {
+    display: block;
+    font-size: 35px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* O cambiá a right: 10px si lo querés a la derecha */
+    z-index: 1000;
+  }
+
+  .mostrarmenu {
+    display: flex !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Estilo para sección galería de noticias === */
+
+.galeria-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #e4d7c9; /* Podés cambiar este fondo según tu sitio */
+}
+
+.news-box {
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 300px;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-box:hover {
+  transform: translateY(-5px);
+}
+
+.news-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+
+.texto-news {
+  padding: 20px;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.leer-mas {
+  display: block;
+  margin: 0 15px 15px 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.leer-mas:hover {
+  background-color: #444;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  .galeria-boxes {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .news-box {
+    max-width: 90%;
+  }
+}
+
+
+
+
+
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.texto {
+  max-width: 40%;
+}
+
+.texto h1 {
+  font-size: 2.1em;
+  font-weight: bold;
+}
+
+.texto p {
+  font-size: 1.5em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Espacio entre imágenes */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Opcional: hace que se acomoden en columna si no hay espacio */
+}
+
+.imagenes img {
+  width: 300px;
+  border: 2px solid black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto, .imagenes {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+.content p {
+  text-align: center;
+  font-size: 25px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
