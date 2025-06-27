@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Presentación InspirArte</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: #fffaf4;
+      overflow: hidden;
+    }
+
+    .contenedor {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diapo {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: left 0.6s ease-in-out;
+    }
+
+    .diapo.active {
+      left: 0;
+      z-index: 1;
+    }
+
+    .diapo.out-left {
+      left: -100vw;
+    }
+
+    .diapo.out-left {
+      left: 100vw;
+    }
+
+    .diapo.out-left {
+      left: 100vw;
+    }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .logo {
+      width: 650px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .nav-flechas {
+      position: fixed;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 100;
+    }
+
+    .nav-flechas button {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 20px;
+      font-size: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-flechas button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+
+
+
+    .datos-autor {
+        font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  font-weight: 400; /* ni negrita ni demasiado fina */
+  margin-top: 20px;
+}
+
+
+.Versace {
+    width: 300px;
+      max-width: 80%;
+      margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.fila-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 0 60px;
+ 
+}
+
+.imagenes-horizontales {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.imagenes-horizontales img {
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+.texto-lateral {
+  max-width: 400px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #222;
+  text-align: left;
+}
+
+#d02 {
+  background-color: #7f2929; /* Elegí el color que quieras */
+}
+
+#d02 h1 {
+  color: #ffffff;
+  font-size: 70px;
+}
+
+#d02 p {
+  color: #ffffff;
+}
+
+#d03 h1 {
+    font-size: 70px;
+}
+
+#d03 p {
+    font-size: 15px;
+}
+
+#d04 h1 {
+    font-size: 70px;
+}
+
+#d04 {
+  background-color: #7f2929; /* Elegí el color que quieras */
+}
+
+#d04 h1 {
+  color: #ffffff;
+  font-size: 70px;
+}
+
+
+
+#d04 p {
+  color: #ffffff;
+}
+
+.lista-objetivos {
+  list-style-type: disc; /* tipo de viñeta: también podés usar circle, square, etc. */
+  padding-left: 40px;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #333; /* podés cambiarlo según el fondo */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lista-objetivos li {
+  margin-bottom: 10px;
+}
+
+.objetivos {
+  width: 500px; /* o lo que quieras */
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+.acerca-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 80px;
+}
+
+.titulo-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px; /* distancia entre el título y la imagen */
+}
+
+.titulo-acerca {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.logo-acerca {
+  height: 16.9em; /* tu valor personalizado */
+}
+
+.contenedor-imagen {
+  align-self: flex-end; /* ubica la imagen a la derecha */
+}
+
+.imagen-acerca {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: -90px; /* 🔼 este valor sube la imagen */
+}
+
+
+
+
+
+.contenido-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  margin-top: -60px; /* 🔼 sube el bloque con el texto */
+}
+
+.texto-acerca {
+  flex: 1;
+  font-size: 1.2em;
+  color: #ffffff;
+  max-width: 600px;
+}
+
+.contenedor-imagen {
+  align-self: flex-end;
+}
+
+.imagen-acerca {
+  width: 300px;
+  height: auto;
+  border-radius: 0; /* ✅ Esquinas rectas (filosas) */
+  margin-top: -90px;
+ 
+}
+
+
+
+
+#d05 {
+  background-color: #fffaf4;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#d05 .titulo-seccion {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#d05 .contenedor-dos-imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.imagen-escritorio,
+.imagen-celular {
+  height: 380px; /* ✅ Igual altura */
+  max-width: 100%;
+  object-fit: contain; /* ✅ Se ven enteras, sin recortes */
+  border-radius: 8px;
+}
+
+
+
+
+
+
+.imagen-lateral {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0; /* esquinas filosas */
+}
+
+#d06 h1 {
+  font-size: 70px;
+}
+
+
+
+
+
+
+
+.lista-objetivos {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-objetivos li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.lista-objetivos li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  background-image: url(mancha\ pintura.png); /* <-- reemplazá con el nombre de tu archivo */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+#d07 {
+  background-color: #7f2929;
+  padding: 60px 80px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#d07 .titulo-seccion {
+  text-align: center;
+  font-size: 70px;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+}
+
+#d07 .fila-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+#d07 .texto-lateral {
+  flex: 1;
+  max-width: 600px;
+  font-size: 25px;
+  line-height: 1.7;
+  color: #ffffff;
+  text-align: left;
+}
+
+#d07 .imagen-lateral {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+
+
+
+.wireframes-cuatro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fila-wireframes {
+  display: flex;
+  gap: 20px;
+}
+
+.fila-wireframes img {
+  width: 230px;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 5px;
+}
+
+
+
+
+
+
+#d08 {
+  background-color: #7f2929;
+  padding: 40px 80px;
+}
+
+#d08 .titulo-seccion {
+  text-align: center;
+  font-size: 70px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+#d08 .fila-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+#d08 .texto-lateral {
+  flex: 1;
+  max-width: 500px;
+  font-size: 25px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+#d08 .contenedor-imagenes-laterales {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#d08 .imagen-lateral {
+  width: 230px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+#d09 .titulo-seccion {
+  text-align: center;
+  font-size: 70px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+#d09 .contenedor-noticias.fila5 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+  max-width: 100%;
+}
+
+#d09 .caja-noticia {
+  width: 200px;
+  background-color: #7f2929;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-shrink: 0; /* Muy importante para que no se achiquen con overflow */
+}
+
+#d09 .caja-noticia img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#d09 .caja-noticia p {
+  padding: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+#d010 .titulo-seccion {
+  text-align: center;
+  font-size: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+#d010 {
+  background-color: #7f2929;
+  padding: 40px 80px;
+}
+
+#d010 .fila-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 40px;
+}
+
+#d010 .texto-lateral {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+#d010 .imagenes-laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  align-items: center;
+}
+
+#d010 .imagenes-laterales img {
+  width: 100%;
+  max-width: 590px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#d010 .lista-punteo {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+#d010 .lista-punteo li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+#d010 .lista-punteo li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  background-color: #e69283; /* color tipo mancha de pintura */
+  border-radius: 50%; /* si querés forma de gota se puede editar */
+}
+
+
+
+
+
+
+#d011 .titulo-seccion {
+  text-align: center;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+#d011 {
+  background-color: #7f2929;
+  padding: 40px 80px;
+}
+
+#d011 .fila-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 40px;
+}
+
+#d011 .texto-lateral {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+#d011 .imagenes-laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  align-items: center;
+}
+
+#d011 .imagenes-laterales img {
+  width: 100%;
+  max-width: 590px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#d011 .lista-punteo {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+#d011 .lista-punteo li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+#d011 .lista-punteo li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  background-color: #e69283; /* color tipo mancha de pintura */
+  border-radius: 50%; /* si querés forma de gota se puede editar */
+}
+
+
+
+
+
+
+
+#d012 {
+  background-color: #fffaf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#d012 .centro-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+#d012 .boton-web {
+  background-color: #7f2929;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  position: relative;
+}
+
+#d012 .boton-web:hover {
+  background-color: #a83232;
+  cursor: pointer;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+  <div class="diapo active" id="d01">
+    <img src="Logo (2).png" alt="InspirArte" class="logo" />
+    <h1>Momento 4 (100% Plus)</h1>
+    <div class="datos-autor">
+        <p>Alumna: Trinidad Maruff</p>
+        <p>Profesor: Wenceslao Zavala</p>
+        <p>Materia: Contenidos y creatividad</p>
+      </div>
+  </div>
+
+  <div class="diapo" id="d02">
+    <h1 style="text-align:center; margin-bottom: 20px;">¿De qué trata la página?</h1>
+    <div class="fila-contenido">
+        <div class="imagenes-horizontales">
+            <img src="Versace.jpg" alt="Imagen Versace 1">
+            <img src="diapositiva 2.jpg" alt="Imagen Versace 2">
+          </div>
+          <div class="texto-lateral">
+            <p>
+                InspirArte es una plataforma que celebra el arte presente en la moda, y cómo esta puede transmitir identidad, cultura y emociones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+  <div class="diapo" id="d03">
+    <h1 style="text-align:center; margin-bottom: 20px;">Objetivos</h1>
+    <div class="fila-contenido">
+        <div class="imagenes-horizontales">
+            <img src="Imagen objetvos.png" alt="Objetivos" class="objetivos">
+          </div>
+          <div class="texto-lateral">
+            <p>
+                En un mundo donde la moda y el arte se entrelazan cada vez más, InspirArte surge como un espacio para destacar esa conexión. Esta plataforma no solo informa, sino que busca inspirar, fomentar una comunidad y generar una experiencia estética que celebre la creatividad en todas sus formas.
+            </p>
+            <ul class="lista-objetivos">
+                <li>Difundir la relación entre moda y arte</li>
+                <li>Ofrecer contenido informativo sobre la relación moda-arte</li>
+                <li>Fomentar una comunidad interesada en estos dos mundos</li>
+                <li>Ofrecer una experiencia web informativa, atractiva y accesible.</li>
+              </ul>
+          </div>
+        </div>
+  </div>
+
+  <div class="diapo" id="d04">
+    <div class="acerca-contenido">
+      <div class="titulo-logo">
+        <h1 class="titulo-acerca">Acerca de:</h1>
+        <img src="Logo (2).png" alt="Logo InspirArte" class="logo-acerca">
+      </div>
+
+      <div class="contenido-inferior">
+        <div class="texto-acerca">
+          <h2>Conocenos</h2>
+          <p>InspirArte es una plataforma que explora el vínculo entre la moda y el arte. Presenta artículos, referencias a movimientos artísticos y ejemplos de su influencia en el diseño de indumentaria, junto con una galería visual que destaca prendas inspiradas en el arte.</p>
+        </div>
+      <div class="contenedor-imagen">
+        <img src="Acerca de.jpeg" alt="Imagen acerca de" class="imagen-acerca">
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<div class="diapo" id="d05">
+    <h2 class="titulo-seccion">Páginas de inicio Web y Móvil</h2>
+    <div class="contenedor-dos-imagenes">
+      <img src="Captura de pantalla 2025-06-24 193331.png" alt="Versión Web" class="imagen-escritorio">
+      <img src="Móvil.jpeg" alt="Versión Móvil" class="imagen-celular">
+    </div>
+  </div>
+  
+
+    <div class="diapo" id="d06">
+        <h1 style="text-align:center; margin-bottom: 40px;">Diseño y fundamentación</h1>
+        <div class="fila-contenido">
+          <div class="texto-lateral">
+            <ul class="lista-objetivos">
+              <li>Diseño visual centrado en lo editorial</li>
+              <li>Uso de imágenes expresivas y artísticas</li>
+              <li>Estilo visual coherente con el nombre del proyecto</li>
+              <li>Moda como forma de expresión artística</li>
+              <li>Accesibilidad e inspiración</li>
+            </ul>
+          </div>
+          <img src="diseño y fundamentación.png" alt="InspirArte propuesta" class="imagen-lateral">
+        </div>
+      </div>
+      
+
+      <div class="diapo" id="d07">
+        <h1 class="titulo-seccion">Wireframe escritorio</h1>
+        <div class="fila-contenido">
+          <div class="texto-lateral">
+            <p>
+                Boceto de la página web, realizado al comienzo de la cursada. Se fue modificando a lo largo de las clases. 
+            </p>
+            </div>
+            <div class="wireframes-cuatro">
+                <div class="fila-wireframes">
+                  <img src="boceto 1.jpeg" alt="Wireframe 1">
+                  <img src="boceto 2.jpeg" alt="Wireframe 2">
+                </div>
+                <div class="fila-wireframes">
+                  <img src="boceto 3.jpeg" alt="Wireframe 3">
+                  <img src="boceto 4.jpeg" alt="Wireframe 4">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diapo" id="d08">
+            <h1 class="titulo-seccion">Wireframe móvil</h1>
+            <div class="fila-contenido">
+              <div class="texto-lateral">
+                <p>
+                  Boceto de la página web, realizado al comienzo de la cursada. Se fue modificando a lo largo de las clases.
+                </p>
+              </div>
+              <div class="contenedor-imagenes-laterales">
+                <img src="movil 1.png" alt="Wireframe móvil 1" class="imagen-lateral">
+                <img src="movil 2.png" alt="Wireframe móvil 2" class="imagen-lateral">
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="diapo" id="d09">
+            <h1 class="titulo-seccion">Proceso de desarrollo</h1>
+            <div class="contenedor-noticias fila5">
+              <div class="caja-noticia">
+                <img src="wireframe 2.jpg" alt="Wireframe">
+                <p>Wireframe para definir la estructura visual.</p>
+              </div>
+              <div class="caja-noticia">
+                <img src="imagen html y css" alt="HTML CSS">
+                <p>HTML y CSS, aplicando una estética limpia y elegante.</p>
+              </div>
+              <div class="caja-noticia">
+                <img src="dispositivos.png" alt="Responsive">
+                <p>Se adaptó a distintos dispositivos usando flexbox y media queries.</p>
+              </div>
+              <div class="caja-noticia">
+                <img src="hamburguesa.png" alt="Menú Hamburguesa">
+                <p>Menú hamburguesa para mejorar la experiencia en celulares.</p>
+              </div>
+              <div class="caja-noticia">
+                <img src="pruebas celular.jpg" alt="Ajustes">
+                <p>Ajustes finales a partir de observaciones y pruebas de uso.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="diapo" id="d010">
+            <h1 class="titulo-seccion">Presupuesto</h1>
+            <div class="fila-contenido">
+              <div class="texto-lateral">
+                <p>
+                  Resumen general del presupuesto teniendo en cuenta los puntos pedidos. <br>
+                  Para calcular el presupuesto del sitio InspirArte, consideré el trabajo realizado:
+                </p>
+          
+                <ul class="lista-punteo">
+                  <li>$15 USD por hora</li>
+                  <li>5 horas por semana</li>
+                  <li>Durante 12 semanas (3 meses)</li>
+                  <br>Entonces:<br>
+                  <li>15 × 5 = 75 USD por semana</li>
+                  <li>75 × 12 semanas = 900 USD en total</li>
+                </ul>
+              </div>
+          
+              <div class="imagenes-laterales">
+                <img src="Presupuesto.png" alt="Diseño en escritorio">
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="diapo" id="d011">
+            <h1 class="titulo-seccion">Criterios para la distribución del presupuesto</h1>
+            <div class="fila-contenido">
+              <div class="texto-lateral">
+                <p>
+                  Para asignar el valor a cada tarea, consideré dos factores:
+                </p>
+
+                <ul class="lista-punteo">
+                  <li>Tiempo estimado de realización</li>
+                  <li>Impacto en el resultado final del sitio</li>
+                </ul>
+
+              </div>
+              <div class="imagenes-laterales">
+                <img src="tiempo estimado.png" alt="Diseño en escritorio">
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="diapo active" id="d012">
+            <div class="centro-boton">
+              <a href="https://05102006tm.github.io/InspirArte/" target="_blank" class="boton-web">Página Web</a>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      
+  
+   
+   
+      
+  
+  
+  
+
+<div class="nav-flechas">
+  <button onclick="anteriorDiapo()">&#10094;</button> <!-- Flecha izquierda -->
+  <button onclick="siguienteDiapo()">&#10095;</button> <!-- Flecha derecha -->
+</div>
+
+<script>
+  let diapoActual = 1;
+  const totalDiapos = 12;
+
+  function mostrarDiapo(numero) {
+    if (numero < 1) numero = totalDiapos;
+    if (numero > totalDiapos) numero = 1;
+
+    const todas = document.querySelectorAll('.diapo');
+    todas.forEach((d, i) => {
+      d.classList.remove('active', 'out-left', 'out-right');
+      if (i + 1 === diapoActual && numero > diapoActual) {
+        d.classList.add('out-left');
+      } else if (i + 1 === diapoActual && numero < diapoActual) {
+        d.classList.add('out-right');
+      }
+    });
+
+    const nueva = document.getElementById(`d0${numero}`);
+    nueva.classList.add('active');
+    diapoActual = numero;
+  }
+
+  function siguienteDiapo() {
+    mostrarDiapo(diapoActual + 1);
+  }
+
+  function anteriorDiapo() {
+    mostrarDiapo(diapoActual - 1);
+  }
+
+  // Soporte con el teclado
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight') siguienteDiapo();
+    if (e.key === 'ArrowLeft') anteriorDiapo();
+  });
+</script>
+
+</body>
+</html>

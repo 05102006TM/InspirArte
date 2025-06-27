@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Presentación InspirArte</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: #fffaf4;
+      overflow: hidden;
+    }
+
+    .contenedor {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diapo {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: left 0.6s ease-in-out;
+    }
+
+    .diapo.active {
+      left: 0;
+      z-index: 1;
+    }
+
+    .diapo.out-left {
+      left: -100vw;
+    }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .logo {
+      width: 650px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .nav-flechas {
+      position: fixed;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 100;
+    }
+
+    .nav-flechas button {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 20px;
+      font-size: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-flechas button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .datos-autor {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+
+    .Versace {
+      width: 300px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .fila-contenido {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      flex-wrap: wrap;
+      padding: 0 60px;
+    }
+
+    .imagenes-horizontales {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .imagenes-horizontales img {
+      max-width: 250px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .texto-lateral {
+      max-width: 400px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #222;
+      text-align: left;
+    }
+
+    #d02 {
+      background-color: #7f2929;
+    }
+
+    #d02 h1 {
+      color: #ffffff;
+      font-size: 70px;
+    }
+
+    #d02 p, #d03 p, #d04 p {
+      color: #ffffff;
+    }
+
+    #d03 h1, #d04 h1 {
+      font-size: 70px;
+      color: #ffffff;
+    }
+
+    .lista-objetivos {
+      list-style-type: disc;
+      padding-left: 40px;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lista-objetivos li {
+      margin-bottom: 10px;
+    }
+
+    .objetivos {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .acerca-contenido {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 80px;
+    }
+
+    .titulo-logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .titulo-acerca {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .logo-acerca {
+      height: 16.9em;
+    }
+
+    .contenedor-imagen {
+      align-self: flex-end;
+    }
+
+    .imagen-acerca {
+      width: 300px;
+      height: auto;
+      border-radius: 0;
+      margin-top: -90px;
+    }
+
+    .contenido-inferior {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      width: 100%;
+      margin-top: -60px;
+    }
+
+    .texto-acerca {
+      flex: 1;
+      font-size: 1.2em;
+      color: #ffffff;
+      max-width: 600px;
+    }
+
+    .seccion-imagenes {
+      margin: 40px auto;
+      padding: 20px 60px;
+    }
+
+    .titulo-seccion {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .contenedor-dos-imagenes {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .imagen-grande {
+      width: 60%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .imagen-chica {
+      width: 35%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="diapo active" id="d01">
+      <img src="Logo (2).png" alt="InspirArte" class="logo" />
+      <h1>Momento 4 (100% Plus)</h1>
+      <div class="datos-autor">
+        <p>Alumna: Trinidad Maruff</p>
+        <p>Profesor: Wenceslao Zavala</p>
+        <p>Materia: Contenidos y creatividad</p>
+      </div>
+    </div>
+
+    <div class="diapo" id="d02">
+      <h1 style="text-align:center; margin-bottom: 20px;">¿De qué trata la página?</h1>
+      <div class="fila-contenido">
+        <div class="imagenes-horizontales">
+          <img src="Versace.jpg" alt="Imagen Versace 1">
+          <img src="diapositiva 2.jpg" alt="Imagen Versace 2">
+        </div>
+        <div class="texto-lateral">
+          <p>
+            InspirArte es una plataforma que celebra el arte presente en la moda, y cómo esta puede transmitir identidad, cultura y emociones.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diapo" id="d03">
+      <h1 style="text-align:center; margin-bottom: 20px;">Objetivos</h1>
+      <div class="fila-contenido">
+        <div class="imagenes-horizontales">
+          <img src="Imagen objetvos.png" alt="Objetivos" class="objetivos">
+        </div>
+        <div class="texto-lateral">
+          <p>
+            En un mundo donde la moda y el arte se entrelazan cada vez más, InspirArte surge como un espacio para destacar esa conexión. Esta plataforma no solo informa, sino que busca inspirar, fomentar una comunidad y generar una experiencia estética que celebre la creatividad en todas sus formas.
+          </p>
+          <ul class="lista-objetivos">
+            <li>Difundir la relación entre moda y arte</li>
+            <li>Ofrecer contenido informativo sobre la relación moda-arte</li>
+            <li>Fomentar una comunidad interesada en estos dos mundos</li>
+            <li>Ofrecer una experiencia web informativa, atractiva y accesible.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="diapo" id="d04">
+      <div class="acerca-contenido">
+        <div class="titulo-logo">
+          <h1 class="titulo-acerca">Acerca de:</h1>
+          <img src="Logo (2).png" alt="Logo InspirArte" class="logo-acerca">
+        </div>
+        <div class="contenido-inferior">
+          <div class="texto-acerca">
+            <h2>Conocenos</h2>
+            <p>InspirArte es una plataforma que explora el vínculo entre la moda y el arte. Presenta artículos, referencias a movimientos artísticos y ejemplos de su influencia en el diseño de indumentaria, junto con una galería visual que destaca prendas inspiradas en el arte.</p>
+          </div>
+          <div class="contenedor-imagen">
+            <img src="Acerca de.jpeg" alt="Imagen acerca de" class="imagen-acerca">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="diapo" id="d05">
+      <div class="seccion-imagenes">
+        <h2 class="titulo-seccion">Destacado</h2>
+        <div class="contenedor-dos-imagenes">
+          <img src="Captura de pantalla 2025-06-24 193331.png" alt="Imagen destacada grande" class="imagen-grande">
+          <img src="Móvil.jpeg" alt="Imagen destacada chica" class="imagen-chica">
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-flechas">
+      <button onclick="anteriorDiapo()">❮</button>
+      <button onclick="siguienteDiapo()">❯</button>
+    </div>
+  </div>
+
+  <script>
+    let diapoActual = 1;
+    const totalDiapos = 5;
+
+    function mostrarDiapo(numero) {
+      if (numero < 1) numero = totalDiapos;
+      if (numero > totalDiapos) numero = 1;
+
+      const todas = document.querySelectorAll('.diapo');
+      todas.forEach((d, i) => {
+        d.classList.remove('active', 'out-left', 'out-right');
+        if (i + 1 === diapoActual && numero > diapoActual) {
+          d.classList.add('out-left');
+        } else if (i + 1 === diapoActual && numero < diapoActual) {
+          d.classList.add('out-right');
+        }
+      });
+
+      const nueva = document.getElementById(`d0${numero}`);
+      nueva.classList.add('active');
+      diapoActual = numero;
+    }
+
+    function siguienteDiapo() {
+      mostrarDiapo(diapoActual + 1);
+    }
+
+    function anteriorDiapo() {
+      mostrarDiapo(diapoActual - 1);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') siguienteDiapo();
+      if (e.key === 'ArrowLeft') anteriorDiapo();
+    });
+  </script>
+</body>
+</html>
