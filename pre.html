@@ -697,6 +697,7 @@
   h1, h2, .titulo-seccion, .titulo-acerca {
     font-size: 1.6em !important;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .fila-contenido,
@@ -722,10 +723,10 @@
   .imagen-escritorio,
   .imagen-celular,
   .imagen-acerca {
-    width: 100% !important;
+    width: 90% !important;
     max-width: 100% !important;
     height: auto !important;
-    margin: 10px 0;
+    margin: 10px auto;
   }
 
   .nav-flechas button {
@@ -740,149 +741,20 @@
     font-size: 1em;
   }
 
-  /* 🔧 Ajustes especiales por diapositiva */
-
-  /* Diapositiva 3: Objetivos */
-  #d03 .fila-contenido {
-    gap: 20px;
-  }
-
-  #d03 .objetivos {
-    max-width: 300px;
-  }
-
-  /* Diapositiva 4: Acerca de */
-  .titulo-logo {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px;
+  /* Diapositiva 3 */
+  #d03 h1 {
+    position: relative;
+    top: 60px;
+    font-size: 1.5em !important;
     margin-bottom: 20px;
-  }
-
-  .logo-acerca {
-    height: auto !important;
-    width: 60% !important;
-    max-width: 200px !important;
-  }
-
-  /* Diapositiva 5: Capturas web/móvil */
-  .contenedor-dos-imagenes img {
-    max-width: 90% !important;
-  }
-
-  /* Diapositiva 6: Diseño y fundamentación */
-  #d06 h1 {
-    font-size: 1.8em;
-  }
-
-  #d06 .lista-objetivos li::before {
-    width: 20px;
-    height: 20px;
-    left: 0;
-    top: 6px;
-  }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-  /* Diapositiva 10 y 11: Presupuesto */
-  #d010 .fila-contenido,
-  #d011 .fila-contenido {
-    flex-direction: column !important;
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  #d010 .titulo-seccion,
-  #d011 .titulo-seccion {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
-
-  #d010 .imagenes-laterales img,
-  #d011 .imagenes-laterales img {
-    width: 100%;
-    max-width: 90%;
-    height: auto;
-  }
-
-  #d010 .lista-punteo li::before,
-  #d011 .lista-punteo li::before {
-    width: 10px;
-    height: 10px;
-    top: 8px;
-  }
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  h1, h2, .titulo-seccion, .titulo-acerca {
-    font-size: 1.6em !important;
     text-align: center;
   }
 
-  .fila-contenido,
-  .contenido-inferior,
-  .imagenes-horizontales,
-  .contenedor-dos-imagenes,
-  .contenedor-imagenes-laterales,
-  .imagenes-laterales {
-    flex-direction: column !important;
-    padding: 0 20px;
-    align-items: center !important;
+  #d03 {
+    padding-top: 100px;
+    padding-bottom: 120px;
   }
 
-  .texto-lateral, .texto-acerca {
-    text-align: center;
-    font-size: 1em;
-    padding: 0 10px;
-    max-width: 100% !important;
-  }
-
-  .imagen-lateral,
-  .objetivos,
-  .imagen-escritorio,
-  .imagen-celular,
-  .imagen-acerca {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin: 10px 0;
-  }
-
-  .nav-flechas button {
-    padding: 12px;
-    font-size: 22px;
-  }
-
-  .lista-objetivos,
-  .lista-punteo {
-    padding-left: 20px;
-    text-align: left;
-    font-size: 1em;
-  }
-
-  /* 🎯 Diapositiva 3: Mejora espaciado */
   #d03 .fila-contenido {
     gap: 20px;
     margin-top: 10px;
@@ -893,7 +765,7 @@
     max-width: 300px;
   }
 
-  /* 🎯 Diapositiva 4: Que no se superponga logo y título */
+  /* Diapositiva 4 */
   .titulo-logo {
     flex-direction: column !important;
     align-items: center !important;
@@ -908,93 +780,6 @@
     margin: 10px auto 0;
   }
 
-  /* 🎯 Diapositiva 6: Mostrar título y achicar imagen */
-  #d06 h1 {
-    font-size: 1.8em !important;
-    margin-bottom: 20px;
-  }
-
-  #d06 .imagen-lateral {
-    max-width: 90%;
-    margin-top: 20px;
-  }
-
- 
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  h1, h2, .titulo-seccion, .titulo-acerca {
-    font-size: 1.5em !important;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .fila-contenido,
-  .contenido-inferior {
-    flex-direction: column !important;
-    padding: 0 20px;
-    align-items: center !important;
-  }
-
-  .texto-lateral, .texto-acerca {
-    text-align: center;
-    font-size: 1em;
-    padding: 0 10px;
-    max-width: 100% !important;
-  }
-
-  .objetivos,
-  .imagen-lateral,
-  .imagen-acerca {
-    width: 90% !important;
-    max-width: 300px;
-    height: auto !important;
-    margin: 10px auto;
-  }
-
-  /* 🛠 Diapositiva 3 */
-  #d03 h1 {
-    font-size: 0.78em !important;
-    margin-top: 20px;
-  }
-
-  #d03 .fila-contenido {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    gap: 15px;
-  }
-
-  #d03 .objetivos {
-    max-width: 100px;
-  }
-
-  /* 🛠 Diapositiva 4 */
-  .titulo-logo {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .logo-acerca {
-    height: auto !important;
-    width: 120px !important;
-    margin-top: 10px;
-  }
-
   #d04 .contenido-inferior {
     margin-top: 10px;
   }
@@ -1004,11 +789,22 @@
     padding: 0 10px;
   }
 
-  /* 🛠 Diapositiva 6 */
+  /* Diapositiva 5 */
+  .contenedor-dos-imagenes img {
+    max-width: 90% !important;
+  }
+
+  /* Diapositiva 6 */
   #d06 h1 {
-    font-size: 1.5em;
+    position: relative;
+    top: 40px;
+    font-size: 1.5em !important;
     margin-bottom: 20px;
-    margin-top: 20px;
+    text-align: center;
+  }
+
+  #d06 {
+    padding-top: 70px;
   }
 
   #d06 .lista-objetivos {
@@ -1020,98 +816,46 @@
     max-width: 250px;
     margin-top: 20px;
   }
-}
 
-
-
-
-
-@media screen and (max-width: 768px) {
-  /* 🔧 Diapositiva 3 - Mueve el título hacia abajo */
-  #d03 h1 {
-    position: relative;
-    top: 50px; /* baja el título */
-    font-size: 1.5em !important;
-    margin-bottom: 20px;
-    text-align: center;
+  /* Diapositiva 7 */
+  #d07 .wireframes-cuatro {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 10px 0;
+    width: 100% !important;
   }
 
-  /* 🔧 Diapositiva 3 - Añade espacio al contenedor para que el título entre */
-  #d03 {
-    padding-top: 80px;
+  #d07 .fila-wireframes {
+    display: contents !important;
   }
 
-  /* 🔧 Diapositiva 6 - Mueve el título hacia abajo */
-  #d06 h1 {
-    position: relative;
-    top: 40px; /* baja el título */
-    font-size: 1.5em !important;
-    margin-bottom: 20px;
-    text-align: center;
+  #d07 .fila-wireframes img {
+    width: 95% !important;
+    height: auto !important;
+    max-width: none !important;
+    display: block;
   }
 
-  #d06 {
-    padding-top: 70px;
-  }
-}
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  /* 🛠 Diapositiva 3 - Bajar el título un poco más */
-  #d03 h1 {
-    position: relative;
-    top: 60px;
-    font-size: 1.5em !important;
-    margin-bottom: 20px;
-    text-align: center;
+  /* Diapositiva 8 */
+  #d08 .contenedor-imagenes-laterales {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 15px;
+    flex-wrap: wrap !important;
+    padding: 10px 0;
   }
 
-  #d03 {
-    padding-top: 100px;
-    padding-bottom: 120px;
-  }
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  /* 🔧 Diapositiva 3 - (ya quedó bien, lo mantenemos) */
-  #d03 h1 {
-    position: relative;
-    top: 60px;
-    font-size: 1.5em !important;
-    margin-bottom: 20px;
-    text-align: center;
+  #d08 .imagen-lateral {
+    width: 47% !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block;
   }
 
-  #d03 {
-    padding-top: 100px;
-    padding-bottom: 120px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  /* DIAPOSITIVA 9: Grid 2-2-1 sin scroll */
+  /* Diapositiva 9 */
   #d09 {
     padding: 30px 20px;
   }
@@ -1147,58 +891,39 @@
     color: white;
   }
 
-  /* La última caja (número 5) ocupará toda la fila sola */
   #d09 .caja-noticia:nth-child(5) {
     grid-column: span 2;
     max-width: 90%;
   }
-}
 
-
-
-
-@media screen and (max-width: 768px) {
-  #d07 .wireframes-cuatro {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr; /* 2 columnas */
+  /* Diapositiva 10 y 11 */
+  #d010 .fila-contenido,
+  #d011 .fila-contenido {
+    flex-direction: column !important;
     gap: 20px;
-    justify-items: center;
-    padding: 10px 0;
+    padding: 0 20px;
   }
 
-  #d07 .fila-wireframes {
-    display: contents !important;
+  #d010 .titulo-seccion,
+  #d011 .titulo-seccion {
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
 
-  #d07 .fila-wireframes img {
-    width: 95% !important;
-    max-width: none !important;
-    height: auto !important;
-  }
-}
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  #d08 .contenedor-imagenes-laterales {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 15px;
-    flex-wrap: wrap !important;
-    padding: 10px 0;
+  #d010 .imagenes-laterales img,
+  #d011 .imagenes-laterales img {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
   }
 
-  #d08 .imagen-lateral {
-    width: 47% !important;
-    max-width: none !important;
-    height: auto !important;
-    display: block;
+  #d010 .lista-punteo li::before,
+  #d011 .lista-punteo li::before {
+    width: 10px;
+    height: 10px;
+    top: 8px;
   }
 }
-
 
 
   </style>

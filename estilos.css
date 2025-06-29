@@ -818,6 +818,28 @@ body {
 
 
 
+.footer-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #8a8785;
+  color: #471313;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #ffffff;
+  color: #471313;
+}
+
+
+
+
+
+
 .h1contacto {
   font-family: Arial, sans-serif;
   background-color: #e4d7c9;
